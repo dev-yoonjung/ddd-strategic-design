@@ -178,54 +178,57 @@ docker compose -p kitchenpos up -d
 
 ### 5-1. 매장 주문
 
-| 한글명 | 영문명 | 설명 |
-| --- | --- | --- |
-| 매장 주문 | eat in order | 손님이 매장의 주문 테이블에 앉아 메뉴를 소비하는 유형의 주문 |
-| 매장 주문 상태 | eat in order status | 현재 매장 주문의 진행 상태 |
-| 접수 대기 | waiting | 손님이 주문한 후 판매자가 접수하기 전까지의 상태 |
-| 접수 | accepted | 판매자가 주문건에 대해 접수를 한 상태 |
-| 서빙 | served | 판매자가 메뉴 준비를 완료한 후 매장의 주문 테이블로 전달한 상태 |
-| 주문 완료 | completed | 주문이 완료된 상태 |
-| 매장 주문 항목 | eat in order line item | 손님이 매장 주문한 메뉴 목록의 항목 |
-| 매장 주문 항목 수량 | quantity of eat in order line item | 매장 주문 항목에 대한 수량 |
-| 매장 주문 항목 가격 | price of eat in order line item | 매장 주문 항목에 대한 가격 |
-| 매장 주문을 등록하다 | register eat in order | 매장 주문을 포스 시스템에 등록하는 행위 |
+| 한글명         | 영문명 | 설명                                   |
+|-------------| --- |--------------------------------------|
+| 매장 주문       | eat in order | 손님이 매장의 주문 테이블에 앉아 메뉴를 소비하는 유형의 주문   |
+| 매장 주문 일시    | eat in order date time | 손님이 판매자에게 매장 주문을 요청한 날짜 및 시각         |
+| 매장 주문 상태    | eat in order status | 현재 매장 주문의 진행 상태                      |
+| 접수 대기       | waiting | 손님이 주문한 후 판매자가 접수하기 전까지의 상태          |
+| 접수          | accepted | 판매자가 주문건에 대해 접수를 한 상태                |
+| 서빙          | served | 판매자가 메뉴 준비를 완료한 후 매장의 주문 테이블로 전달한 상태 |
+| 주문 완료       | completed | 주문이 완료된 상태                           |
+| 매장 주문 항목    | eat in order line item | 손님이 매장 주문한 메뉴 목록의 항목                 |
+| 매장 주문 항목 수량 | quantity of eat in order line item | 매장 주문 항목에 대한 수량                      |
+| 매장 주문 항목 가격 | price of eat in order line item | 매장 주문 항목에 대한 가격                      |
+| 매장 주문을 등록하다 | register eat in order | 매장 주문을 포스 시스템에 등록하는 행위               |
 
 ### 5-2. 배달 주문
 
-| 한글명              | 영문명                                  | 설명                                                  |
-|------------------|--------------------------------------|-----------------------------------------------------|
-| 배달 주문            | delivery order                       | 손님이 매장에 방문하여 요청한 메뉴를 가지고 가는 유형의 주문                  |
-| 배달 주소            | delivery address                     | 손님이 주문한 주문 항목을 배달해야 하는 주소                           |
-| 배달 주문 상태         | delivery order status                | 현재 배달 주문의 진행 상태                                     |
-| 접수 대기            | waiting                              | 손님이 주문한 후 판매자가 접수하기 전까지의 상태                         |
-| 접수               | accepted                             | 판매자가 주문건에 대해 접수를 한 상태                               |
-| 서빙               | served                               | 판매자가 메뉴 준비를 완료한 후 손님에게 배달을 하기 위해 배달 기사에게 메뉴를 전달한 상태 |
-| 배달 중             | delivering                           | 메뉴를 전달받은 배달 기사가 손님에게 배달 중인 상태                       |
-| 배달 완료            | delivered                            | 배달 기사가 손님이 요청한 배달 주소에 메뉴 배달이 완료된 상태                 |
-| 주문 완료            | completed                            | 주문이 완료된 상태                                          |
-| 배달 대행사           | delivery agency                      | 주문에 대한 배달을 대신 수행해주는 대행사                             |
-| 배달 기사            | delivery rider                       | 손님에게 메뉴를 전달하기 위해 배달을 수행하는 배달 대행사 소속 라이더             |
-| 배달 주문 항목         | delivery order line item             | 손님이 배달 주문한 메뉴 목록의 항목                                |
-| 배달 주문 항목 수량      | quantity of delivery order line item | 배달 주문 항목에 대한 수량                                     |
-| 배달 주문 항목 가격      | price of delivery order line item    | 배달 주문 항목에 대한 가격                                     |
-| 배달 주문을 등록하다      | register delivery order              | 배달 주문을 포스 시스템에 등록하는 행위                              |
-| 배달 대행사에 배달을 요청하다 | request delivery to delivery agency  | 판매자가 손님에게 배달 주문 항목을 배달하기 위해 배달 대행사에 배달을 요청하는 행위     |
+| 한글명              | 영문명                                 | 설명                                                 |
+|------------------|-------------------------------------|----------------------------------------------------|
+| 배달 주문            | delivery order                      | 손님이 매장에 방문하여 요청한 메뉴를 가지고 가는 유형의 주문                 |
+| 배달 주소            | delivery address                    | 손님이 주문한 주문 항목을 배달해야 하는 주소                          |
+| 배달 주문 일시         | delivery order date time            | 손님이 판매자에게 배달 주문을 요청한 날짜 및 시각                       |
+| 배달 주문 상태         | delivery order status               | 현재 배달 주문의 진행 상태                                    |
+| 접수 대기            | waiting                             | 손님이 주문한 후 판매자가 접수하기 전까지의 상태                        |
+| 접수               | accepted                            | 판매자가 주문건에 대해 접수를 한 상태                              |
+| 서빙               | served                              | 판매자가 메뉴 준비를 완료한 후 손님에게 배달을 하기 위해 배달 기사에게 메뉴를 전달한 상태 |
+| 배달 중             | delivering                          | 메뉴를 전달받은 배달 기사가 손님에게 배달 중인 상태                      |
+| 배달 완료            | delivered                           | 배달 기사가 손님이 요청한 배달 주소에 메뉴 배달이 완료된 상태                |
+| 주문 완료            | completed                           | 주문이 완료된 상태                                         |
+| 배달 대행사           | delivery agency                     | 주문에 대한 배달을 대신 수행해주는 대행사                            |
+| 배달 기사            | delivery rider                      | 손님에게 메뉴를 전달하기 위해 배달을 수행하는 배달 대행사 소속 라이더            |
+| 배달 주문 항목         | delivery order line item            | 손님이 배달 주문한 메뉴 목록의 항목                               |
+| 배달 주문 항목 수량      | quantity of delivery order line item | 배달 주문 항목에 대한 수량                                    |
+| 배달 주문 항목 가격      | price of delivery order line item   | 배달 주문 항목에 대한 가격                                    |
+| 배달 주문을 등록하다      | register delivery order             | 배달 주문을 포스 시스템에 등록하는 행위                             |
+| 배달 대행사에 배달을 요청하다 | request delivery to delivery agency | 판매자가 손님에게 배달 주문 항목을 배달하기 위해 배달 대행사에 배달을 요청하는 행위    |
 
 ### 5-3. 포장 주문
 
-| 한글명 | 영문명 | 설명 |
-| --- | --- | --- |
-| 포장 주문 | takeout order | 손님이 매장에 방문하여 요청한 메뉴를 가지고 가는 유형의 주문 |
-| 포장 주문 상태 | takeout order status | 현재 포장 주문의 진행 상태 |
-| 접수 대기 | waiting | 손님이 주문한 후 판매자가 접수하기 전까지의 상태 |
-| 접수 | accepted | 판매자가 주문건에 대해 접수를 한 상태 |
-| 서빙 | served | 판매자가 메뉴 준비를 완료한 후 손님이 매장에 방문하여 메뉴를 가지고 간 상태 |
-| 주문 완료 | completed | 주문이 완료된 상태 |
-| 포장 주문 항목 | takeout order line item | 손님이 포장 주문한 메뉴 목록의 항목 |
-| 포장 주문 항목 수량 | quantity of takeout order line item | 포장 주문 항목에 대한 수량 |
-| 포장 주문 항목 가격 | price of takeout order line item | 포장 주문 항목에 대한 가격 |
-| 포장 주문을 등록하다 | register takeout order | 포장 주문을 포스 시스템에 등록하는 행위 |
+| 한글명         | 영문명                                 | 설명                                         |
+|-------------|-------------------------------------|--------------------------------------------|
+| 포장 주문       | takeout order                       | 손님이 매장에 방문하여 요청한 메뉴를 가지고 가는 유형의 주문         |
+| 포장 주문 일시    | takeout order date time             | 손님이 판매자에게 포장 주문을 요청한 날짜 및 시각               |
+| 포장 주문 상태    | takeout order status                | 현재 포장 주문의 진행 상태                            |
+| 접수 대기       | waiting                             | 손님이 주문한 후 판매자가 접수하기 전까지의 상태                |
+| 접수          | accepted                            | 판매자가 주문건에 대해 접수를 한 상태                      |
+| 서빙          | served                              | 판매자가 메뉴 준비를 완료한 후 손님이 매장에 방문하여 메뉴를 가지고 간 상태 |
+| 주문 완료       | completed                           | 주문이 완료된 상태                                 |
+| 포장 주문 항목    | takeout order line item             | 손님이 포장 주문한 메뉴 목록의 항목                       |
+| 포장 주문 항목 수량 | quantity of takeout order line item | 포장 주문 항목에 대한 수량                            |
+| 포장 주문 항목 가격 | price of takeout order line item    | 포장 주문 항목에 대한 가격                            |
+| 포장 주문을 등록하다 | register takeout order              | 포장 주문을 포스 시스템에 등록하는 행위                     |
 
 ## 모델링
 
