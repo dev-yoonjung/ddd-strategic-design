@@ -130,21 +130,22 @@ docker compose -p kitchenpos up -d
 
 ### 3. 메뉴
 
-| 한글명           | 영문명                   | 설명                                  |
-|---------------|-----------------------|-------------------------------------|
-| 메뉴            | menu                  | 손님이 주문할 수 있는 단위                     |
-| 메뉴 가격         | menu price            | 손님이 메뉴를 주문하기 위해 지불해야 하는 금액          |
-| 메뉴 이름         | menu name             | 메뉴를 구별하기 위해 부르는 말                   |
-| 메뉴 노출 여부      | displayed             | 손님이 해당 메뉴를 주문할 수 있도록 노출되어 있는지에 대한 여부 |
-| 메뉴 목록         | menus                 | 포스 시스템에 등록되어 있는 메뉴의 목록              |
-| 메뉴에 속한 상품     | menu product          | 메뉴를 구성하고 있는 상품                      |
-| 메뉴에 속한 상품의 수량 | quantity of menu product | 메뉴에 속한 상품에 대한 수량                    |
-| 메뉴에 속한 상품 목록  | menu products         | 메뉴를 구성하고 있는 상품들의 목록                 |
-| 메뉴를 등록하다      | register menu         | 메뉴를 포스 시스템에 등록하는 행위                 |
-| 메뉴 가격을 변경하다   | change menu price     | 포스 시스템에 등록되어 있는 해당 메뉴 가격을 변경하는 행위   |
-| 메뉴를 노출하다      | display menu          | 손님이 해당 메뉴를 주문할 수 있도록 노출하는 행위        |
-| 메뉴를 숨기다       | hide menu             | 손님이 해당 메뉴를 주문할 수 없도록 숨기는 행위         |
-| 메뉴 목록을 조회하다   | retrieve menus        | 포스 시스템에 등록되어 있는 메뉴의 목록을 조회하는 행위     |
+| 한글명           | 영문명                  | 설명                                   |
+|---------------|----------------------|--------------------------------------|
+| 메뉴            | menu                 | 손님이 주문할 수 있는 단위                      |
+| 메뉴 가격         | menu price           | 손님이 메뉴를 주문하기 위해 지불해야 하는 금액           |
+| 메뉴 이름         | menu name            | 메뉴를 구별하기 위해 부르는 말                    |
+| 메뉴 노출 여부      | displayed            | 손님이 해당 메뉴를 주문할 수 있도록 노출되어 있는지에 대한 여부 |
+| 메뉴 목록         | menus                | 포스 시스템에 등록되어 있는 메뉴의 목록               |
+| 메뉴에 속한 상품     | menu product         | 메뉴를 구성하고 있는 상품                       |
+| 메뉴에 속한 상품의 수량 | menu product quantity | 메뉴에 속한 상품에 대한 수량                     |
+| 메뉴에 속한 상품의 가격 | menu product price   | 메뉴에 속한 상품에 대한 가격                     |
+| 메뉴에 속한 상품 목록  | menu products        | 메뉴를 구성하고 있는 상품들의 목록                  |
+| 메뉴를 등록하다      | register menu        | 메뉴를 포스 시스템에 등록하는 행위                  |
+| 메뉴 가격을 변경하다   | change menu price    | 포스 시스템에 등록되어 있는 해당 메뉴 가격을 변경하는 행위    |
+| 메뉴를 노출하다      | display menu         | 손님이 해당 메뉴를 주문할 수 있도록 노출하는 행위         |
+| 메뉴를 숨기다       | hide menu            | 손님이 해당 메뉴를 주문할 수 없도록 숨기는 행위          |
+| 메뉴 목록을 조회하다   | retrieve menus       | 포스 시스템에 등록되어 있는 메뉴의 목록을 조회하는 행위      |
 
 ### 4. 주문테이블
 
@@ -174,19 +175,19 @@ docker compose -p kitchenpos up -d
 
 ### 5-1. 매장 주문
 
-| 한글명         | 영문명 | 설명                                   |
-|-------------| --- |--------------------------------------|
-| 매장 주문       | eat in order | 손님이 매장의 주문 테이블에 앉아 메뉴를 소비하는 유형의 주문   |
-| 매장 주문 일시    | eat in order date time | 손님이 판매자에게 매장 주문을 요청한 날짜 및 시각         |
-| 매장 주문 상태    | eat in order status | 현재 매장 주문의 진행 상태                      |
-| 접수 대기       | waiting | 손님이 주문한 후 판매자가 접수하기 전까지의 상태          |
-| 접수          | accepted | 판매자가 주문건에 대해 접수를 한 상태                |
-| 서빙          | served | 판매자가 메뉴 준비를 완료한 후 매장의 주문 테이블로 전달한 상태 |
-| 주문 완료       | completed | 주문이 완료된 상태                           |
-| 매장 주문 항목    | eat in order line item | 손님이 매장 주문한 메뉴 목록의 항목                 |
-| 매장 주문 항목 수량 | quantity of eat in order line item | 매장 주문 항목에 대한 수량                      |
-| 매장 주문 항목 가격 | price of eat in order line item | 매장 주문 항목에 대한 가격                      |
-| 매장 주문을 등록하다 | register eat in order | 매장 주문을 포스 시스템에 등록하는 행위               |
+| 한글명         | 영문명                             | 설명                                   |
+|-------------|---------------------------------|--------------------------------------|
+| 매장 주문       | eat in order                    | 손님이 매장의 주문 테이블에 앉아 메뉴를 소비하는 유형의 주문   |
+| 매장 주문 일시    | eat in order date time          | 손님이 판매자에게 매장 주문을 요청한 날짜 및 시각         |
+| 매장 주문 상태    | eat in order status             | 현재 매장 주문의 진행 상태                      |
+| 접수 대기       | waiting                         | 손님이 주문한 후 판매자가 접수하기 전까지의 상태          |
+| 접수          | accepted                        | 판매자가 주문건에 대해 접수를 한 상태                |
+| 서빙          | served                          | 판매자가 메뉴 준비를 완료한 후 매장의 주문 테이블로 전달한 상태 |
+| 주문 완료       | completed                       | 주문이 완료된 상태                           |
+| 매장 주문 항목    | eat in order line item          | 손님이 매장 주문한 메뉴 목록의 항목                 |
+| 매장 주문 항목 수량 | eat in order line item quantity | 매장 주문 항목에 대한 수량                      |
+| 매장 주문 항목 가격 | eat in order line item price         | 매장 주문 항목에 대한 가격                      |
+| 매장 주문을 등록하다 | register eat in order           | 매장 주문을 포스 시스템에 등록하는 행위               |
 
 ### 5-2. 배달 주문
 
@@ -205,26 +206,26 @@ docker compose -p kitchenpos up -d
 | 배달 대행사           | delivery agency                     | 주문에 대한 배달을 대신 수행해주는 대행사                            |
 | 배달 기사            | delivery rider                      | 손님에게 메뉴를 전달하기 위해 배달을 수행하는 배달 대행사 소속 라이더            |
 | 배달 주문 항목         | delivery order line item            | 손님이 배달 주문한 메뉴 목록의 항목                               |
-| 배달 주문 항목 수량      | quantity of delivery order line item | 배달 주문 항목에 대한 수량                                    |
-| 배달 주문 항목 가격      | price of delivery order line item   | 배달 주문 항목에 대한 가격                                    |
+| 배달 주문 항목 수량      | delivery order line item quantity   | 배달 주문 항목에 대한 수량                                    |
+| 배달 주문 항목 가격      | delivery order line item price           | 배달 주문 항목에 대한 가격                                    |
 | 배달 주문을 등록하다      | register delivery order             | 배달 주문을 포스 시스템에 등록하는 행위                             |
 | 배달 대행사에 배달을 요청하다 | request delivery to delivery agency | 판매자가 손님에게 배달 주문 항목을 배달하기 위해 배달 대행사에 배달을 요청하는 행위    |
 
 ### 5-3. 포장 주문
 
-| 한글명         | 영문명                                 | 설명                                         |
-|-------------|-------------------------------------|--------------------------------------------|
-| 포장 주문       | takeout order                       | 손님이 매장에 방문하여 요청한 메뉴를 가지고 가는 유형의 주문         |
-| 포장 주문 일시    | takeout order date time             | 손님이 판매자에게 포장 주문을 요청한 날짜 및 시각               |
-| 포장 주문 상태    | takeout order status                | 현재 포장 주문의 진행 상태                            |
-| 접수 대기       | waiting                             | 손님이 주문한 후 판매자가 접수하기 전까지의 상태                |
-| 접수          | accepted                            | 판매자가 주문건에 대해 접수를 한 상태                      |
-| 서빙          | served                              | 판매자가 메뉴 준비를 완료한 후 손님이 매장에 방문하여 메뉴를 가지고 간 상태 |
-| 주문 완료       | completed                           | 주문이 완료된 상태                                 |
-| 포장 주문 항목    | takeout order line item             | 손님이 포장 주문한 메뉴 목록의 항목                       |
-| 포장 주문 항목 수량 | quantity of takeout order line item | 포장 주문 항목에 대한 수량                            |
-| 포장 주문 항목 가격 | price of takeout order line item    | 포장 주문 항목에 대한 가격                            |
-| 포장 주문을 등록하다 | register takeout order              | 포장 주문을 포스 시스템에 등록하는 행위                     |
+| 한글명         | 영문명                              | 설명                                         |
+|-------------|----------------------------------|--------------------------------------------|
+| 포장 주문       | takeout order                    | 손님이 매장에 방문하여 요청한 메뉴를 가지고 가는 유형의 주문         |
+| 포장 주문 일시    | takeout order date time          | 손님이 판매자에게 포장 주문을 요청한 날짜 및 시각               |
+| 포장 주문 상태    | takeout order status             | 현재 포장 주문의 진행 상태                            |
+| 접수 대기       | waiting                          | 손님이 주문한 후 판매자가 접수하기 전까지의 상태                |
+| 접수          | accepted                         | 판매자가 주문건에 대해 접수를 한 상태                      |
+| 서빙          | served                           | 판매자가 메뉴 준비를 완료한 후 손님이 매장에 방문하여 메뉴를 가지고 간 상태 |
+| 주문 완료       | completed                        | 주문이 완료된 상태                                 |
+| 포장 주문 항목    | takeout order line item          | 손님이 포장 주문한 메뉴 목록의 항목                       |
+| 포장 주문 항목 수량 | takeout order line item quantity | 포장 주문 항목에 대한 수량                            |
+| 포장 주문 항목 가격 | takeout order line item price         | 포장 주문 항목에 대한 가격                            |
+| 포장 주문을 등록하다 | register takeout order           | 포장 주문을 포스 시스템에 등록하는 행위                     |
 
 ## 모델링
 
@@ -232,118 +233,164 @@ docker compose -p kitchenpos up -d
 
 ### 상품(Product)
 
-- 상품은 아래와 같은 항목을 가지고 있다.
+- `Product`는 아래와 같은 **속성**을 가진다.
   - 식별자
-  - 상품 이름
-  - 상품 가격
-- 상품 이름에는 비속어가 포함될 수 없다.
-- 상품 가격은 0원 이상이어야 한다.
+  - `productName`
+    - `productName`에는 `profanity`가 포함될 수 없다.
+  - `productPrice`
+    - `productPrice`는 0원 이상이어야 한다.
+
+- `Product`는 아래와 같은 **행위**를 가진다.
+  - `Product`를 등록한다.
+  - `productPrice`를 변경한다.
+    - `productPrice`가 변경될 때 <br/>
+      `menuPrice`가 `menuProductPrice`의 합보다 크면 <br/>
+      `Menu`가 숨겨진다.
+  - `products`를 조회한다. 
 
 ### 메뉴(Menu)
 
-- 메뉴 그룹은 아래와 같은 항목을 가지고 있다.
+- `MenuGroup`은 아래와 같은 **속성**을 가진다.
   - 식별자
-  - 메뉴 그룹 이름
-- 메뉴 그룹의 이름은 비워둘 수 없다.
+  - `menuGroupName`
+    - `menuGroupName`은 비워둘 수 없다.
 
----
+- `MenuGroup`은 아래와 같은 **행위**를 가진다.
+  - `MenuGroup`을 등록한다.
+  - `menuGroups`를 조회한다.
 
-- 메뉴는 아래와 같은 항목을 가지고 있다.
+
+- `Menu`는 아래와 같은 **속성**을 가진다.
   - 식별자
-  - 메뉴 이름
-  - 메뉴 가격
-  - 메뉴 노출 여부
-  - 메뉴에 속한 상품 목록
-- 메뉴에 속한 상품 금액의 합은 메뉴의 가격보다 크거나 같아야 한다.
-- 메뉴의 가격은 0원 이상이어야 한다.
-- 메뉴의 이름에는 비속어가 포함될 수 없다.
-- 메뉴는 메뉴 그룹에 반드시 속해야 한다.
-- 메뉴의 가격이 메뉴에 속한 상품 금액의 합보다 높을 경우 메뉴를 노출할 수 없다.
+  - `MenuName`
+    - `MenuName`에는 `profanity`가 포함될 수 없다.
+  - `menuPrice`
+    - `menuPrice`는 0원 이상이어야 한다.
+  - `displayed`
+  - `menuProducts`
+    - 1개 이상의 `MenuProduct`가 등록되어야 한다. 
 
----
+- `Menu`는 아래와 같은 **행위**를 가진다.
+  - `Menu`을 등록한다.
+    - `menuProductPrice`의 합은 `menuPrice`보다 크거나 같아야 한다.
+    - `Menu`는 `menuGroup`에 반드시 속해야 한다.
+  - `menus`를 조회한다.
+  - `menuPrice`를 변경한다. 
+    - `menuProductPrice`의 합은 `menuPrice`보다 크거나 같아야 한다.
+  - `Menu`를 노출할 수 있다.
+    - `menuPrice`가 `menuProductPrice`의 합보다 높을 경우 `Menu`를 노출할 수 없다.
+  - `Menu`를 숨길 수 있다.
+  - `menus`를 조회한다.
 
-- 메뉴에 속한 상품은 아래와 같은 항목을 가지고 있다.
-  - 상품정보
-  - 가격
-  - 수량
-- 메뉴에 속한 상품의 수량은 0개 이상이어야 한다.
-- 상품이 존재해야 한다.
 
-### 매장 주문(Eat-in Order)
+- `menuProduct`는 아래와 같은 **속성**을 가진다.
+  - `product`
+    - `product`가 존재해야 한다.
+  - `menuProductPrice`
+  - `menuProductQuantity`
+    - `menuProductQuantity`은 0개 이상이어야 한다.
 
-- 주문 테이블은 아래와 같은 항목을 가지고 있다.
-  - 이름
-  - 방문한 손님 수
-- 주문 테이블의 이름은 비워 둘 수 없다.
-- 방문한 손님 수가 0명 이상이어야 한다.
+### 매장 주문(Eat in Order)
 
----
+- `OrderTable`은 아래와 같은 **속성**을 가진다.
+  - `orderTableName`
+    - `orderTableName`은 비워 둘 수 없다.
+  - `numberOfGuest`
+    - `numberOfGuest`가 0명 이상이어야 한다.
+  - `occupied`
 
-- 매장 주문 항목은 아래와 같은 항목을 가지고 있다.
-  - 메뉴정보
-  - 가격
-  - 수량
-- 메뉴가 존재해야 한다.
-- 숨겨진 메뉴는 주문할 수 없다.
-- 주문한 메뉴의 가격은 실제 메뉴 가격과 일치해야 한다.
+- `OrderTable`은 아래와 같은 **행위**를 가진다.
+  - `OrderTable`을 등록한다.
+  - `occupied`를 해지한다.
+    - `completed`되지 않은 `order`가 있는 `orderTable`은 `occupied`로 해지할 수 없다.
+  - `occupied`를 설정한다.
+  - `numberOfGuest`를 변경한다.
+    - `occupied`가 해지되어있는 `OrderTable`은 `numberOfGuest`를 변경할 수 없다.
+  - `orderTables`를 조회한다.
 
----
 
-- 매장 주문은 아래와 같은 항목을 가지고 있다.
+- `EatInOrderLineItem`은 아래와 같은 **속성**을 가진다.
+  - `menu`
+    - `Menu`가 존재해야 한다.
+    - `Menu`는 숨겨져있음 안된다.
+  - `eatInOrderLineItemPrice`
+    - `eatInOrderLineItemPrice`은 `menuPrice`와 일치해야 한다.
+  - `eatInOrderLineItemQuantity`
+
+
+- `EatInOrder`는 아래와 같은 **속성**을 가진다.
   - 식별자
-  - 주문 상태
-  - 주문 일시
-  - 주문을 요청한 주문 테이블
-  - 주문 항목
-- 빈 테이블에는 매장 주문을 등록할 수 없다.
-- 매장 주문은 접수 대기 ▶︎ 접수 ▶︎ 서빙 ▶︎ 주문 완료의 상태 흐름을 가진다.
+  - `eatInOrderStatus`
+    - `eatInOrderStatus`은 `WAITING` ▶︎ `ACCEPTED` ▶︎ `SERVED` ▶︎ `COMPLETED`의 흐름을 가진다.
+        <img src="https://file.notion.so/f/f/1011ccbc-e1ee-4af0-9d87-e570697dbbb4/410a3880-f321-49d6-ae8d-2323fd68585f/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-01_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.07.18.png?id=414759eb-a0f4-42f4-8cd6-c7614af15f57&table=block&spaceId=1011ccbc-e1ee-4af0-9d87-e570697dbbb4&expirationTimestamp=1717322400000&signature=3m4mwPW8_4Wp8uOONtuyPEZBOaZtE2RcTh8WZ0_UL8A&downloadName=%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2024-06-01+%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE+5.07.18.png" />
+  - `eatInOrderDateTime`
+  - `orderTable`
+    - `occupied`가 해지되어있는 `orderTable`일 수 없다.
+  - `eatInOrderLineItems`
+    - 1개 이상의 `eatInOrderLineItem`을 가져야 한다.
 
-  <img src="https://file.notion.so/f/f/1011ccbc-e1ee-4af0-9d87-e570697dbbb4/410a3880-f321-49d6-ae8d-2323fd68585f/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-01_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.07.18.png?id=414759eb-a0f4-42f4-8cd6-c7614af15f57&table=block&spaceId=1011ccbc-e1ee-4af0-9d87-e570697dbbb4&expirationTimestamp=1717322400000&signature=3m4mwPW8_4Wp8uOONtuyPEZBOaZtE2RcTh8WZ0_UL8A&downloadName=%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2024-06-01+%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE+5.07.18.png" />
+- `EatInOrder`는 아래와 같은 **행위**를 가진다.
+  - `EatInOrder`를 등록한다.
+  - `EatInOrder`를 접수한다.
+  - `EatInOrder`를 서빙한다.
+  - `EatInOrder`를 완료한다.
 
 
 ### 배달 주문(Delivery Order)
 
-- 매장 주문 항목은 아래와 같은 항목을 가지고 있다.
-  - 메뉴정보
-  - 가격
-  - 수량
-- 메뉴가 존재해야 한다.
-- 숨겨진 메뉴는 주문할 수 없다.
-- 주문한 메뉴의 가격은 실제 메뉴 가격과 일치해야 한다.
-- 주문 항목의 수량은 0개 이상이어야 한다.
+- `DeliveryOrderLineItem`은 아래와 같은 **속성**을 가진다.
+  - `menu`
+    - `Menu`가 존재해야 한다.
+    - `Menu`는 숨겨져있음 안된다.
+  - `deliveryOrderLineItemPrice`
+    - `deliveryOrderLineItemPrice`은 `menuPrice`와 일치해야 한다.
+  - `deliveryOrderLineItemQuantity`
+    - `deliveryOrderLineItemQuantity`은 0개 이상이어야 한다.
 
----
 
-- 배달 주문은 아래와 같은 항목을 가지고 있다.
+- `DeliveryOrder`는 아래와 같은 **속성**을 가지고 있다.
   - 식별자
-  - 주문 상태
-  - 주문 일시
-  - 배달 주소
-  - 주문 항목
-- 배달 주소는 비워 둘 수 없다.
-- 배달 주문은 접수 대기 ▶︎ 접수 ▶︎ 서빙 ▶︎ 배달 중 ▶︎ 배달 완료 ▶︎ 주문 완료의 상태 흐름을 가진다.
+  - `deliveryOrderStatus`
+    - `deliveryOrderStatus`은 `WAITING` ▶︎ `ACCEPTED` ▶︎ `SERVED` ▶︎ `DELIVERING` ▶︎ `DELIVERED` ▶︎ `COMPLETED`의 흐름을 가진다.
+      <img src="https://file.notion.so/f/f/1011ccbc-e1ee-4af0-9d87-e570697dbbb4/a3bc2bec-6a73-43c3-88ed-ba43a4f3e32e/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-01_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.56.08.png?id=a6cf6bec-7dc2-4d9c-8ef0-600f5b0c514d&table=block&spaceId=1011ccbc-e1ee-4af0-9d87-e570697dbbb4&expirationTimestamp=1717322400000&signature=lJPfZs4l0vLJXL2m4bHZjeOoTvsTQppy8ddFmtOJcJY&downloadName=%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2024-06-01+%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE+5.56.08.png">
+  - `deliveryOrderDateTime`
+  - `deliveryAddress`
+    - `deliveryAddress`는 비워 둘 수 없다.
+  - `deliveryOrderLineItems`
+    - 1개 이상의 `deliveryOrderLineItems`을 가져야 한다.
 
-  <img src="https://file.notion.so/f/f/1011ccbc-e1ee-4af0-9d87-e570697dbbb4/a3bc2bec-6a73-43c3-88ed-ba43a4f3e32e/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-01_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.56.08.png?id=a6cf6bec-7dc2-4d9c-8ef0-600f5b0c514d&table=block&spaceId=1011ccbc-e1ee-4af0-9d87-e570697dbbb4&expirationTimestamp=1717322400000&signature=lJPfZs4l0vLJXL2m4bHZjeOoTvsTQppy8ddFmtOJcJY&downloadName=%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2024-06-01+%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE+5.56.08.png">
+- `DeliveryOrder`는 아래와 같은 **행위**를 가진다.
+  - `DeliveryOrder`를 등록한다.
+  - `DeliveryOrder`를 접수한다.
+  - `DeliveryOrder`를 서빙한다.
+  - `DeliveryOrder`배달을 시작한다.
+  - `DeliveryOrder`배달을 완료한다.
+  - `DeliveryOrder`를 완료한다.
 
 
 ### 포장 주문(Takeout Order)
 
-- 포장 주문 항목은 아래와 같은 항목을 가지고 있다.
-  - 메뉴정보
-  - 가격
-  - 수량
-- 메뉴가 존재해야 한다.
-- 숨겨진 메뉴는 주문할 수 없다.
-- 주문한 메뉴의 가격은 실제 메뉴 가격과 일치해야 한다.
-- 주문 항목의 수량은 0개 이상이어야 한다.
+- `TakeoutOrderLineItem`은 아래와 같은 **속성**을 가진다.
+  - `menu`
+    - `Menu`가 존재해야 한다.
+    - `Menu`는 숨겨져있음 안된다.
+  - `takeoutOrderLineItemPrice`
+    - `takeoutOrderLineItemPrice`은 `menuPrice`와 일치해야 한다.
+  - `takeoutOrderLineItemQuantity`
+    - `takeoutOrderLineItemQuantity`은 0개 이상이어야 한다.
 
----
 
-- 포장 주문은 아래와 같은 항목을 가지고 있다.
+- `TakeoutOrder`는 아래와 같은 **속성**을 가지고 있다.
   - 식별자
-  - 주문 상태
-  - 주문 일시
-  - 주문 항목
-- 포장 주문은 접수 대기 ▶︎ 접수 ▶︎ 서빙 ▶︎ 주문 완료의 상태 흐름을 가진다.
+  - `takeoutOrderStatus`
+    - `takeoutOrderStatus`은 `WAITING` ▶︎ `ACCEPTED` ▶︎ `SERVED` ▶︎ `COMPLETED`의 흐름을 가진다.
+      <img src="https://file.notion.so/f/f/1011ccbc-e1ee-4af0-9d87-e570697dbbb4/e126fd4b-edac-4da4-9c37-573d0842c2e9/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-01_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.59.48.png?id=3f17249b-d264-46c3-a4e3-43e0d28ba86b&table=block&spaceId=1011ccbc-e1ee-4af0-9d87-e570697dbbb4&expirationTimestamp=1717322400000&signature=0aRHURVpUjsXifvEXNvoYUgZdWf9O7K0qgjVJ4vdLzc&downloadName=%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2024-06-01+%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE+5.59.48.png" />
+  - `takeoutOrderDateTime`
+  - `takeoutOrderLineItems`
+    - 1개 이상의 `deliveryOrderLineItems`을 가져야 한다.
 
-  <img src="https://file.notion.so/f/f/1011ccbc-e1ee-4af0-9d87-e570697dbbb4/e126fd4b-edac-4da4-9c37-573d0842c2e9/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-01_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.59.48.png?id=3f17249b-d264-46c3-a4e3-43e0d28ba86b&table=block&spaceId=1011ccbc-e1ee-4af0-9d87-e570697dbbb4&expirationTimestamp=1717322400000&signature=0aRHURVpUjsXifvEXNvoYUgZdWf9O7K0qgjVJ4vdLzc&downloadName=%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2024-06-01+%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE+5.59.48.png" />
+- `TakeoutOrder`는 아래와 같은 **행위**를 가진다.
+  - `TakeoutOrder`를 등록한다.
+  - `TakeoutOrder`를 접수한다.
+  - `TakeoutOrder`를 서빙한다.
+  - `TakeoutOrder`를 완료한다.
