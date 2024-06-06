@@ -98,13 +98,13 @@ docker compose -p kitchenpos up -d
 
 ### 0. 기타
 
-| 한글명 | 영문명 | 설명                                                   |
-| --- | --- |------------------------------------------------------|
-| 포스 시스템 | pos system | 매장 운영 및 물품 판매를 목적으로 만들어진 시스템                         |
-| 판매자 | seller | 매장에서 메뉴를 판매 및 주문을 받는 사람                              |
-| 손님 | customer | 매장에 돈을 지불하고 판매자에게 주문을 하는 사람                          |
-| 매장 | store | 판매자가 메뉴를 판매 및 주문을 받는 장소 <br/> 손님이 주문한 메뉴를 식사할 수도 있다. |
-| 비속어 | profanity | 욕설 및 부적절한 단어를 지칭                                     |
+| 한글명   | 영문명         | 설명                                                   |
+|-------|-------------|------------------------------------------------------|
+| 키친 포스 | kitchen pos | 매장 운영 및 물품 판매를 목적으로 만들어진 시스템                         |
+| 판매자   | seller      | 매장에서 메뉴를 판매 및 주문을 받는 사람                              |
+| 손님    | customer    | 매장에 돈을 지불하고 판매자에게 주문을 하는 사람                          |
+| 매장    | store       | 판매자가 메뉴를 판매 및 주문을 받는 장소 <br/> 손님이 주문한 메뉴를 식사할 수도 있다. |
+| 비속어   | profanity   | 욕설 및 부적절한 단어를 지칭                                     |
 
 ### 1. 상품
 
@@ -149,20 +149,20 @@ docker compose -p kitchenpos up -d
 
 ### 4. 주문테이블
 
-| 한글명               | 영문명                   | 설명                                               |
-|-------------------|-----------------------|--------------------------------------------------|
-| 주문 테이블            | order table           | 매장에서 손님이 메뉴를 소비할 수 있는 테이블                        |
-| 주문 테이블 이름         | order table name      | 주문 테이블을 구별하기 위해 부르는 말                            |
-| 올바르지 않은 주문 테이블 이름 | invalid order table name | 포스 시스템에 등록할 수 없는 주문 테이블 이름                       |
-| 빈 테이블             | empty order table     | 아무도 앉지 않은 주문 테이블                                 |
-| 방문한 손님 수          | number of guest       | 현재 주문 테이블에 앉아 있는 손님의 수                           |
-| 주문 테이블 점유 여부      | occupied              | 현재 주문 테이블에 손님이 앉아 있는 지에 대한 여부                    |
-| 주문 테이블 목록         | order tables          | 포스 시스템에 등록되어 있는 주문 테이블의 목록                       |
-| 주문 테이블을 등록하다      | register order table  | 주문 테이블을 포스 시스템에 등록하는 행위                          |
-| 빈 테이블로 설정하다       | clear order table     | 주문 테이블에 앉았던 손님이 떠나 다른 손님이 앉을 수 있도록 빈 테이블로 설정하는 행위 |
-| 빈 테이블을 해지하다       | sit order table       | 주문 테이블에 손님이 앉아 빈 테이블로 설정했던 것을 해지 하는 행위           |
-| 주문 테이블 목록을 조회하다   | retrieve order tables | 포스 시스템에 등록되어 있는 주문 테이블의 목록을 조회하는 행위              |
-| 방문한 손님 수를 변경하다    | change number of guest | 현재 주문 테이블에 앉아 있는 손님의 수를 변경한다.                    |
+| 한글명              | 영문명                   | 설명                                         |
+|------------------|-----------------------|--------------------------------------------|
+| 주문 테이블           | order table           | 매장에서 손님이 메뉴를 소비할 수 있는 테이블                  |
+| 주문 테이블 이름        | order table name      | 주문 테이블을 구별하기 위해 부르는 말                      |
+| 올바르지 않은 주문 테이블 이름 | invalid order table name | 포스 시스템에 등록할 수 없는 주문 테이블 이름                 |
+| 빈 주문 테이블         | empty order table     | 아무도 앉지 않은 주문 테이블                           |
+| 방문한 손님 수         | number of guest       | 현재 주문 테이블에 앉아 있는 손님의 수                     |
+| 주문 테이블 점유 여부     | occupied              | 현재 주문 테이블에 손님이 앉아 있는 지에 대한 여부              |
+| 주문 테이블 목록        | order tables          | 포스 시스템에 등록되어 있는 주문 테이블의 목록                 |
+| 주문 테이블을 등록하다     | register order table  | 주문 테이블을 포스 시스템에 등록하는 행위                    |
+| 정리하다             | clear order table     | 주문 테이블에 앉았던 손님이 떠나 다른 손님이 앉을 수 있도록 정리하는 행위 |
+| 앉다               | sit order table       | 빈 주문 테이블에 손님이 앉는 행위                        |
+| 주문 테이블 목록을 조회하다  | retrieve order tables | 포스 시스템에 등록되어 있는 주문 테이블의 목록을 조회하는 행위        |
+| 방문한 손님 수를 변경하다   | change number of guest | 현재 주문 테이블에 앉아 있는 손님의 수를 변경한다.              |
 
 ### 5. 주문
 
@@ -233,164 +233,54 @@ docker compose -p kitchenpos up -d
 
 ### 상품(Product)
 
-- `Product`는 아래와 같은 **속성**을 가진다.
-  - 식별자
-  - `productName`
-    - `productName`에는 `profanity`가 포함될 수 없다.
-  - `productPrice`
-    - `productPrice`는 0원 이상이어야 한다.
-
-- `Product`는 아래와 같은 **행위**를 가진다.
-  - `Product`를 등록한다.
-  - `productPrice`를 변경한다.
-    - `productPrice`가 변경될 때 <br/>
-      `menuPrice`가 `menuProductPrice`의 합보다 크면 <br/>
-      `Menu`가 숨겨진다.
-  - `products`를 조회한다. 
+- `Product`는 식별자와 `profanity`가 포함되지 않은 `productName` 그리고 0원 이상의 `productPrice`를 가진다.
 
 ### 메뉴(Menu)
 
-- `MenuGroup`은 아래와 같은 **속성**을 가진다.
-  - 식별자
-  - `menuGroupName`
-    - `menuGroupName`은 비워둘 수 없다.
-
-- `MenuGroup`은 아래와 같은 **행위**를 가진다.
-  - `MenuGroup`을 등록한다.
-  - `menuGroups`를 조회한다.
+- `MenuGroup`은 식별자와 공백이 아닌 `menuGroupName`을 가진다.
 
 
-- `Menu`는 아래와 같은 **속성**을 가진다.
-  - 식별자
-  - `MenuName`
-    - `MenuName`에는 `profanity`가 포함될 수 없다.
-  - `menuPrice`
-    - `menuPrice`는 0원 이상이어야 한다.
-  - `displayed`
-  - `menuProducts`
-    - 1개 이상의 `MenuProduct`가 등록되어야 한다. 
-
-- `Menu`는 아래와 같은 **행위**를 가진다.
-  - `Menu`을 등록한다.
-    - `menuProductPrice`의 합은 `menuPrice`보다 크거나 같아야 한다.
-    - `Menu`는 `menuGroup`에 반드시 속해야 한다.
-  - `menus`를 조회한다.
-  - `menuPrice`를 변경한다. 
-    - `menuProductPrice`의 합은 `menuPrice`보다 크거나 같아야 한다.
-  - `Menu`를 노출할 수 있다.
-    - `menuPrice`가 `menuProductPrice`의 합보다 높을 경우 `Menu`를 노출할 수 없다.
-  - `Menu`를 숨길 수 있다.
-  - `menus`를 조회한다.
+-`Menu`는 식별자와 `profanity`가 포함되지 않은 `menuName`, 0원 이상의 `menuPrice`, 메뉴 노출 여부를 나타내는 `displayed`, 그리고 `menuProduct`들을 가진다.
+- `Menu`는 반드시 `MenuGroup`에 속해있어야 한다.
+- `Menu`는 `menuProduct`들의 가격(`menuProductQuantity` * `menuProductPrice`)들의 합계보다 가격이 높지 않아야 한다는 가격정책을 가지고 있다.
+- `Menu`는 가격정책 내에서 `menuPrice`를 변경할 수 있다.
+- 가격정책이 지켜진 `Menu`는 고객이 볼 수 있도록 노출할 수 있다.
+- `Menu`를 고객이 볼 수 없도록 숨길 수 있다.
 
 
-- `menuProduct`는 아래와 같은 **속성**을 가진다.
-  - `product`
-    - `product`가 존재해야 한다.
-  - `menuProductPrice`
-  - `menuProductQuantity`
-    - `menuProductQuantity`은 0개 이상이어야 한다.
+- `MenuProduct`는 `profanity`가 포함되지 않은 `productName`, 0원 이상의 `productPrice`, 그리고 0개 이상의 `menuProductQuantity`를 가진다.
 
 ### 매장 주문(Eat in Order)
 
-- `OrderTable`은 아래와 같은 **속성**을 가진다.
-  - `orderTableName`
-    - `orderTableName`은 비워 둘 수 없다.
-  - `numberOfGuest`
-    - `numberOfGuest`가 0명 이상이어야 한다.
-  - `occupied`
-
-- `OrderTable`은 아래와 같은 **행위**를 가진다.
-  - `OrderTable`을 등록한다.
-  - `occupied`를 해지한다.
-    - `completed`되지 않은 `order`가 있는 `orderTable`은 `occupied`로 해지할 수 없다.
-  - `occupied`를 설정한다.
-  - `numberOfGuest`를 변경한다.
-    - `occupied`가 해지되어있는 `OrderTable`은 `numberOfGuest`를 변경할 수 없다.
-  - `orderTables`를 조회한다.
+- `OrderTable`은 식별자, 공백이 아닌 `orderTableName`, 0명 이상의 `numberOfGuest`, 그리고 현재 고객이 앉아 있는지 테이블의 상태를 확인하기 위한 `occupied`를 가진다.
+- `completed`되지 않은 `Order`가 없는 `OrderTable`은 고객이 앉을 수 있게 정리할 수 있다.
+- `OrderTable`에 고객이 앉을 수 있다.
+- 고객이 앉아 있는 `OrderTable`은 `numberOfGuest`를 변경할 수 있다.
 
 
-- `EatInOrderLineItem`은 아래와 같은 **속성**을 가진다.
-  - `menu`
-    - `Menu`가 존재해야 한다.
-    - `Menu`는 숨겨져있음 안된다.
-  - `eatInOrderLineItemPrice`
-    - `eatInOrderLineItemPrice`은 `menuPrice`와 일치해야 한다.
-  - `eatInOrderLineItemQuantity`
+- `EatInOrderLineItem`은 고객에게 노출되어 있는 `Menu`, `eatInOrderLineItemPrice` 그리고 `eatInOrderLineItemQuantity`를 가진다.
 
 
-- `EatInOrder`는 아래와 같은 **속성**을 가진다.
-  - 식별자
-  - `eatInOrderStatus`
-    - `eatInOrderStatus`은 `WAITING` ▶︎ `ACCEPTED` ▶︎ `SERVED` ▶︎ `COMPLETED`의 흐름을 가진다.
-        <img src="https://file.notion.so/f/f/1011ccbc-e1ee-4af0-9d87-e570697dbbb4/410a3880-f321-49d6-ae8d-2323fd68585f/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-01_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.07.18.png?id=414759eb-a0f4-42f4-8cd6-c7614af15f57&table=block&spaceId=1011ccbc-e1ee-4af0-9d87-e570697dbbb4&expirationTimestamp=1717322400000&signature=3m4mwPW8_4Wp8uOONtuyPEZBOaZtE2RcTh8WZ0_UL8A&downloadName=%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2024-06-01+%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE+5.07.18.png" />
-  - `eatInOrderDateTime`
-  - `orderTable`
-    - `occupied`가 해지되어있는 `orderTable`일 수 없다.
-  - `eatInOrderLineItems`
-    - 1개 이상의 `eatInOrderLineItem`을 가져야 한다.
+- `EatInOrder`는 식별자, `eatInOrderStatus`, `eatInOrderDateTime`, 고객이 앉아 있는 `OrderTable` 그리고 1개 이상의 `EatInOrderLineItem`을 가진다. 
+- `EatInOrder`은 `WAITING` ▶︎ `ACCEPTED` ▶︎ `SERVED` ▶︎ `COMPLETED`의 순서로 주문이 진행된다.
+  <img src="https://file.notion.so/f/f/1011ccbc-e1ee-4af0-9d87-e570697dbbb4/410a3880-f321-49d6-ae8d-2323fd68585f/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-01_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.07.18.png?id=414759eb-a0f4-42f4-8cd6-c7614af15f57&table=block&spaceId=1011ccbc-e1ee-4af0-9d87-e570697dbbb4&expirationTimestamp=1717322400000&signature=3m4mwPW8_4Wp8uOONtuyPEZBOaZtE2RcTh8WZ0_UL8A&downloadName=%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2024-06-01+%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE+5.07.18.png" />
 
-- `EatInOrder`는 아래와 같은 **행위**를 가진다.
-  - `EatInOrder`를 등록한다.
-  - `EatInOrder`를 접수한다.
-  - `EatInOrder`를 서빙한다.
-  - `EatInOrder`를 완료한다.
 
 
 ### 배달 주문(Delivery Order)
 
-- `DeliveryOrderLineItem`은 아래와 같은 **속성**을 가진다.
-  - `menu`
-    - `Menu`가 존재해야 한다.
-    - `Menu`는 숨겨져있음 안된다.
-  - `deliveryOrderLineItemPrice`
-    - `deliveryOrderLineItemPrice`은 `menuPrice`와 일치해야 한다.
-  - `deliveryOrderLineItemQuantity`
-    - `deliveryOrderLineItemQuantity`은 0개 이상이어야 한다.
+- `DeliveryOrderLineItem`은 고객에게 노출되어 있는 `Menu`, `deliveryOrderLineItemPrice` 그리고 0개 이상의 `deliveryOrderLineItemQuantity`를 가진다.
 
 
-- `DeliveryOrder`는 아래와 같은 **속성**을 가지고 있다.
-  - 식별자
-  - `deliveryOrderStatus`
-    - `deliveryOrderStatus`은 `WAITING` ▶︎ `ACCEPTED` ▶︎ `SERVED` ▶︎ `DELIVERING` ▶︎ `DELIVERED` ▶︎ `COMPLETED`의 흐름을 가진다.
-      <img src="https://file.notion.so/f/f/1011ccbc-e1ee-4af0-9d87-e570697dbbb4/a3bc2bec-6a73-43c3-88ed-ba43a4f3e32e/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-01_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.56.08.png?id=a6cf6bec-7dc2-4d9c-8ef0-600f5b0c514d&table=block&spaceId=1011ccbc-e1ee-4af0-9d87-e570697dbbb4&expirationTimestamp=1717322400000&signature=lJPfZs4l0vLJXL2m4bHZjeOoTvsTQppy8ddFmtOJcJY&downloadName=%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2024-06-01+%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE+5.56.08.png">
-  - `deliveryOrderDateTime`
-  - `deliveryAddress`
-    - `deliveryAddress`는 비워 둘 수 없다.
-  - `deliveryOrderLineItems`
-    - 1개 이상의 `deliveryOrderLineItems`을 가져야 한다.
-
-- `DeliveryOrder`는 아래와 같은 **행위**를 가진다.
-  - `DeliveryOrder`를 등록한다.
-  - `DeliveryOrder`를 접수한다.
-  - `DeliveryOrder`를 서빙한다.
-  - `DeliveryOrder`배달을 시작한다.
-  - `DeliveryOrder`배달을 완료한다.
-  - `DeliveryOrder`를 완료한다.
+- `DeliveryOrder`는 식별자, `deliveryOrderStatus`, `deliveryOrderDateTime`, 공백일 수 없는 `deliveryAddress`, 그리고 1개 이상의 `DeliveryOrderLineItem`을 가진다.
+- `DeliveryOrder`은 `WAITING` ▶︎ `ACCEPTED` ▶︎ `SERVED` ▶︎ `DELIVERING` ▶︎ `DELIVERED` ▶︎ `COMPLETED`의 순서로 주문이 진행된다.
 
 
 ### 포장 주문(Takeout Order)
 
-- `TakeoutOrderLineItem`은 아래와 같은 **속성**을 가진다.
-  - `menu`
-    - `Menu`가 존재해야 한다.
-    - `Menu`는 숨겨져있음 안된다.
-  - `takeoutOrderLineItemPrice`
-    - `takeoutOrderLineItemPrice`은 `menuPrice`와 일치해야 한다.
-  - `takeoutOrderLineItemQuantity`
-    - `takeoutOrderLineItemQuantity`은 0개 이상이어야 한다.
+- `TakeoutOrderLineItem`은 고객에게 노출되어 있는 `Menu`, `takeoutOrderLineItemPrice` 그리고 0개 이상의 `deliveryOrderLineItemQuantity`를 가진다.
 
 
-- `TakeoutOrder`는 아래와 같은 **속성**을 가지고 있다.
-  - 식별자
-  - `takeoutOrderStatus`
-    - `takeoutOrderStatus`은 `WAITING` ▶︎ `ACCEPTED` ▶︎ `SERVED` ▶︎ `COMPLETED`의 흐름을 가진다.
-      <img src="https://file.notion.so/f/f/1011ccbc-e1ee-4af0-9d87-e570697dbbb4/e126fd4b-edac-4da4-9c37-573d0842c2e9/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-01_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.59.48.png?id=3f17249b-d264-46c3-a4e3-43e0d28ba86b&table=block&spaceId=1011ccbc-e1ee-4af0-9d87-e570697dbbb4&expirationTimestamp=1717322400000&signature=0aRHURVpUjsXifvEXNvoYUgZdWf9O7K0qgjVJ4vdLzc&downloadName=%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2024-06-01+%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE+5.59.48.png" />
-  - `takeoutOrderDateTime`
-  - `takeoutOrderLineItems`
-    - 1개 이상의 `deliveryOrderLineItems`을 가져야 한다.
-
-- `TakeoutOrder`는 아래와 같은 **행위**를 가진다.
-  - `TakeoutOrder`를 등록한다.
-  - `TakeoutOrder`를 접수한다.
-  - `TakeoutOrder`를 서빙한다.
-  - `TakeoutOrder`를 완료한다.
+- `TakeoutOrder`는 식별자, `takeoutOrderStatus`, `takeoutOrderDateTime`, 그리고 1개 이상의 `TakeoutOrderLineItem`을 가진다.
+- `TakeoutOrder`은 `WAITING` ▶︎ `ACCEPTED` ▶︎ `SERVED` ▶︎ `COMPLETED`의 순서로 주문이 진행된다.
+   <img src="https://file.notion.so/f/f/1011ccbc-e1ee-4af0-9d87-e570697dbbb4/e126fd4b-edac-4da4-9c37-573d0842c2e9/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-01_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.59.48.png?id=3f17249b-d264-46c3-a4e3-43e0d28ba86b&table=block&spaceId=1011ccbc-e1ee-4af0-9d87-e570697dbbb4&expirationTimestamp=1717322400000&signature=0aRHURVpUjsXifvEXNvoYUgZdWf9O7K0qgjVJ4vdLzc&downloadName=%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2024-06-01+%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE+5.59.48.png" />
