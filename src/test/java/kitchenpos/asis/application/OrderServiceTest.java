@@ -1,6 +1,6 @@
 package kitchenpos.asis.application;
 
-import kitchenpos.asis.domain.MenuRepository;
+import kitchenpos.menu.domain.MenuRepository;
 import kitchenpos.asis.domain.Order;
 import kitchenpos.asis.domain.OrderLineItem;
 import kitchenpos.asis.domain.OrderRepository;
@@ -8,6 +8,7 @@ import kitchenpos.asis.domain.OrderStatus;
 import kitchenpos.asis.domain.OrderTable;
 import kitchenpos.asis.domain.OrderTableRepository;
 import kitchenpos.asis.domain.OrderType;
+import kitchenpos.menu.InMemoryMenuRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -27,10 +28,10 @@ import java.util.Random;
 import java.util.UUID;
 
 import static kitchenpos.Fixtures.INVALID_ID;
-import static kitchenpos.Fixtures.menu;
-import static kitchenpos.Fixtures.menuProduct;
 import static kitchenpos.Fixtures.order;
 import static kitchenpos.Fixtures.orderTable;
+import static kitchenpos.menu.MenuFixtures.menu;
+import static kitchenpos.menu.MenuFixtures.menuProduct;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertAll;

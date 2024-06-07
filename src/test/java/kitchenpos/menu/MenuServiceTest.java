@@ -1,9 +1,11 @@
-package kitchenpos.asis.application;
+package kitchenpos.menu;
 
-import kitchenpos.asis.domain.Menu;
-import kitchenpos.asis.domain.MenuGroupRepository;
-import kitchenpos.asis.domain.MenuProduct;
-import kitchenpos.asis.domain.MenuRepository;
+import kitchenpos.asis.application.FakePurgomalumClient;
+import kitchenpos.menu.application.MenuService;
+import kitchenpos.menu.domain.Menu;
+import kitchenpos.menu.domain.MenuGroupRepository;
+import kitchenpos.menu.domain.MenuProduct;
+import kitchenpos.menu.domain.MenuRepository;
 import kitchenpos.product.domain.Product;
 import kitchenpos.product.domain.ProductRepository;
 import kitchenpos.asis.infra.PurgomalumClient;
@@ -25,9 +27,9 @@ import java.util.NoSuchElementException;
 import java.util.UUID;
 
 import static kitchenpos.Fixtures.INVALID_ID;
-import static kitchenpos.Fixtures.menu;
-import static kitchenpos.Fixtures.menuGroup;
-import static kitchenpos.Fixtures.menuProduct;
+import static kitchenpos.menu.MenuFixtures.menu;
+import static kitchenpos.menu.MenuFixtures.menuGroup;
+import static kitchenpos.menu.MenuFixtures.menuProduct;
 import static kitchenpos.product.ProductFixtures.product;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;

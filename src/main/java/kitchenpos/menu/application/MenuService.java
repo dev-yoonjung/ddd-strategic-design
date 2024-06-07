@@ -1,10 +1,10 @@
-package kitchenpos.asis.application;
+package kitchenpos.menu.application;
 
-import kitchenpos.asis.domain.Menu;
-import kitchenpos.asis.domain.MenuGroup;
-import kitchenpos.asis.domain.MenuGroupRepository;
-import kitchenpos.asis.domain.MenuProduct;
-import kitchenpos.asis.domain.MenuRepository;
+import kitchenpos.menu.domain.Menu;
+import kitchenpos.menu.domain.MenuGroup;
+import kitchenpos.menu.domain.MenuGroupRepository;
+import kitchenpos.menu.domain.MenuProduct;
+import kitchenpos.menu.domain.MenuRepository;
 import kitchenpos.product.domain.Product;
 import kitchenpos.product.domain.ProductRepository;
 import kitchenpos.asis.infra.PurgomalumClient;

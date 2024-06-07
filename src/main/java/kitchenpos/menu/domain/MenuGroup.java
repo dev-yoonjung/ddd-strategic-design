@@ -1,4 +1,4 @@
-package kitchenpos.asis.domain;
+package kitchenpos.menu.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

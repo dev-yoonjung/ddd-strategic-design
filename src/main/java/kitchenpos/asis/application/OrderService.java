@@ -1,7 +1,7 @@
 package kitchenpos.asis.application;
 
-import kitchenpos.asis.domain.Menu;
-import kitchenpos.asis.domain.MenuRepository;
+import kitchenpos.menu.domain.Menu;
+import kitchenpos.menu.domain.MenuRepository;
 import kitchenpos.asis.domain.Order;
 import kitchenpos.asis.domain.OrderRepository;
 import kitchenpos.asis.domain.OrderStatus;
