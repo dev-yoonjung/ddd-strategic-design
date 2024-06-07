@@ -1,6 +1,6 @@
 package kitchenpos.product;
 
-import kitchenpos.asis.domain.Product;
+import kitchenpos.product.domain.Product;
 
 import java.math.BigDecimal;
 import java.util.UUID;
