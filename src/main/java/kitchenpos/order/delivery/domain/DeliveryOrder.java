@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
-@Table(name = "orders")
+@Table(name = "delivery_orders")
 @Entity
 public class DeliveryOrder {
     @Column(name = "id", columnDefinition = "binary(16)")
