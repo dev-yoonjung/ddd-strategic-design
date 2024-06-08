@@ -16,17 +16,6 @@ import static kitchenpos.menu.MenuFixtures.menu;
 public class Fixtures {
     public static final UUID INVALID_ID = new UUID(0L, 0L);
 
-    public static Order order(final OrderStatus status, final String deliveryAddress) {
-        final Order order = new Order();
-        order.setId(UUID.randomUUID());
-        order.setType(OrderType.DELIVERY);
-        order.setStatus(status);
-        order.setOrderDateTime(LocalDateTime.of(2020, 1, 1, 12, 0));
-        order.setOrderLineItems(Arrays.asList(orderLineItem()));
-        order.setDeliveryAddress(deliveryAddress);
-        return order;
-    }
-
     public static Order order(final OrderStatus status) {
         final Order order = new Order();
         order.setId(UUID.randomUUID());
@@ -55,16 +44,5 @@ public class Fixtures {
         return orderLineItem;
     }
 
-    public static OrderTable orderTable() {
-        return orderTable(false, 0);
-    }
 
-    public static OrderTable orderTable(final boolean occupied, final int numberOfGuests) {
-        final OrderTable orderTable = new OrderTable();
-        orderTable.setId(UUID.randomUUID());
-        orderTable.setName("1번");
-        orderTable.setNumberOfGuests(numberOfGuests);
-        orderTable.setOccupied(occupied);
-        return orderTable;
-    }
 }

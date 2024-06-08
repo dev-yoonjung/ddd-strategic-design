@@ -1,7 +1,7 @@
 package kitchenpos.order.eatin.application;
 
-import kitchenpos.asis.domain.OrderRepository;
-import kitchenpos.asis.domain.OrderStatus;
+import kitchenpos.order.eatin.domain.EatInOrderRepository;
+import kitchenpos.order.eatin.domain.EatInOrderStatus;
 import kitchenpos.order.eatin.domain.OrderTable;
 import kitchenpos.order.eatin.domain.OrderTableRepository;
 import org.springframework.stereotype.Service;
@@ -15,11 +15,11 @@ import java.util.UUID;
 @Service
 public class OrderTableService {
     private final OrderTableRepository orderTableRepository;
-    private final OrderRepository orderRepository;
+    private final EatInOrderRepository eatInOrderRepository;
 
-    public OrderTableService(final OrderTableRepository orderTableRepository, final OrderRepository orderRepository) {
+    public OrderTableService(final OrderTableRepository orderTableRepository, final EatInOrderRepository eatInOrderRepository) {
         this.orderTableRepository = orderTableRepository;
-        this.orderRepository = orderRepository;
+        this.eatInOrderRepository = eatInOrderRepository;
     }
 
     @Transactional
@@ -48,7 +48,7 @@ public class OrderTableService {
     public OrderTable clear(final UUID orderTableId) {
         final OrderTable orderTable = orderTableRepository.findById(orderTableId)
             .orElseThrow(NoSuchElementException::new);
-        if (orderRepository.existsByOrderTableAndStatusNot(orderTable, OrderStatus.COMPLETED)) {
+        if (eatInOrderRepository.existsByOrderTableAndStatusNot(orderTable, EatInOrderStatus.COMPLETED)) {
             throw new IllegalStateException();
         }
         orderTable.setNumberOfGuests(0);
