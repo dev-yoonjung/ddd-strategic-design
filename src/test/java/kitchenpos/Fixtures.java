@@ -3,7 +3,7 @@ package kitchenpos;
 import kitchenpos.asis.domain.Order;
 import kitchenpos.asis.domain.OrderLineItem;
 import kitchenpos.asis.domain.OrderStatus;
-import kitchenpos.asis.domain.OrderTable;
+import kitchenpos.order.eatin.domain.OrderTable;
 import kitchenpos.asis.domain.OrderType;
 
 import java.time.LocalDateTime;

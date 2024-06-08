@@ -1,6 +1,6 @@
 package kitchenpos.asis.ui;
 
-import kitchenpos.asis.application.OrderService;
+import kitchenpos.order.eatin.application.EatInOrderService;
 import kitchenpos.asis.domain.Order;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,9 +18,9 @@ import java.util.UUID;
 @RequestMapping("/api/orders")
 @RestController
 public class OrderRestController {
-    private final OrderService orderService;
+    private final EatInOrderService orderService;
 
-    public OrderRestController(final OrderService orderService) {
+    public OrderRestController(final EatInOrderService orderService) {
         this.orderService = orderService;
     }
 

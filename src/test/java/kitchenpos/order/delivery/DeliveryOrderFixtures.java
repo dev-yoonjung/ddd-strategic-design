@@ -20,7 +20,7 @@ public class DeliveryOrderFixtures {
         order.setId(UUID.randomUUID());
         order.setStatus(status);
         order.setOrderDateTime(LocalDateTime.of(2020, 1, 1, 12, 0));
-        order.setOrderLineItems(List.of(orderLineItem()));
+        order.setDeliveryOrderOrderLineItems(List.of(orderLineItem()));
         order.setDeliveryAddress(deliveryAddress);
         return order;
     }

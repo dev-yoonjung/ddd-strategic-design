@@ -235,7 +235,7 @@ class DeliveryOrderServiceTest {
     ) {
         final DeliveryOrder order = new DeliveryOrder();
         order.setDeliveryAddress(deliveryAddress);
-        order.setOrderLineItems(Arrays.asList(orderLineItems));
+        order.setDeliveryOrderOrderLineItems(Arrays.asList(orderLineItems));
         return order;
     }
 
@@ -245,7 +245,7 @@ class DeliveryOrderServiceTest {
     ) {
         final DeliveryOrder order = new DeliveryOrder();
         order.setDeliveryAddress(deliveryAddress);
-        order.setOrderLineItems(orderLineItems);
+        order.setDeliveryOrderOrderLineItems(orderLineItems);
         return order;
     }
 

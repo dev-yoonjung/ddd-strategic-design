@@ -12,6 +12,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
+import kitchenpos.order.eatin.domain.OrderTable;
 
 import java.time.LocalDateTime;
 import java.util.List;

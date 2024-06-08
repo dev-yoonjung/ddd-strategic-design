@@ -1,10 +1,5 @@
 package kitchenpos.order.delivery.application;
 
-import kitchenpos.asis.domain.Order;
-import kitchenpos.asis.domain.OrderLineItem;
-import kitchenpos.asis.domain.OrderStatus;
-import kitchenpos.asis.domain.OrderTable;
-import kitchenpos.asis.domain.OrderType;
 import kitchenpos.order.delivery.infra.KitchenridersClient;
 import kitchenpos.menu.domain.Menu;
 import kitchenpos.menu.domain.MenuRepository;
@@ -76,7 +71,7 @@ public class DeliveryOrderService {
         deliveryOrder.setId(UUID.randomUUID());
         deliveryOrder.setStatus(DeliveryOrderStatus.WAITING);
         deliveryOrder.setOrderDateTime(LocalDateTime.now());
-        deliveryOrder.setOrderLineItems(deliveryOrderLineItems);
+        deliveryOrder.setDeliveryOrderOrderLineItems(deliveryOrderLineItems);
         final String deliveryAddress = request.getDeliveryAddress();
         if (Objects.isNull(deliveryAddress) || deliveryAddress.isEmpty()) {
             throw new IllegalArgumentException();

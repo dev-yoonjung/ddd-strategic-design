@@ -5,8 +5,9 @@ import kitchenpos.asis.domain.Order;
 import kitchenpos.asis.domain.OrderLineItem;
 import kitchenpos.asis.domain.OrderRepository;
 import kitchenpos.asis.domain.OrderStatus;
-import kitchenpos.asis.domain.OrderTable;
-import kitchenpos.asis.domain.OrderTableRepository;
+import kitchenpos.order.eatin.application.EatInOrderService;
+import kitchenpos.order.eatin.domain.OrderTable;
+import kitchenpos.order.eatin.domain.OrderTableRepository;
 import kitchenpos.asis.domain.OrderType;
 import kitchenpos.menu.InMemoryMenuRepository;
 import kitchenpos.order.delivery.FakeKitchenridersClient;
@@ -43,7 +44,7 @@ class OrderServiceTest {
     private MenuRepository menuRepository;
     private OrderTableRepository orderTableRepository;
     private FakeKitchenridersClient kitchenridersClient;
-    private OrderService orderService;
+    private EatInOrderService orderService;
 
     @BeforeEach
     void setUp() {
@@ -51,7 +52,7 @@ class OrderServiceTest {
         menuRepository = new InMemoryMenuRepository();
         orderTableRepository = new InMemoryOrderTableRepository();
         kitchenridersClient = new FakeKitchenridersClient();
-        orderService = new OrderService(orderRepository, menuRepository, orderTableRepository, kitchenridersClient);
+        orderService = new EatInOrderService(orderRepository, menuRepository, orderTableRepository, kitchenridersClient);
     }
 
     @DisplayName("1개 이상의 등록된 메뉴로 배달 주문을 등록할 수 있다.")

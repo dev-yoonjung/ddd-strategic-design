@@ -3,7 +3,7 @@ package kitchenpos.asis.application;
 import kitchenpos.asis.domain.Order;
 import kitchenpos.asis.domain.OrderRepository;
 import kitchenpos.asis.domain.OrderStatus;
-import kitchenpos.asis.domain.OrderTable;
+import kitchenpos.order.eatin.domain.OrderTable;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package kitchenpos.order.delivery.domain;
+package kitchenpos.order.eatin.domain;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -8,8 +8,10 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.ForeignKey;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -17,14 +19,14 @@ import java.util.UUID;
 
 @Table(name = "orders")
 @Entity
-public class DeliveryOrder {
+public class EatInOrder {
     @Column(name = "id", columnDefinition = "binary(16)")
     @Id
     private UUID id;
 
     @Column(name = "status", nullable = false, columnDefinition = "varchar(255)")
     @Enumerated(EnumType.STRING)
-    private DeliveryOrderStatus status;
+    private EatInOrderStatus status;
 
     @Column(name = "order_date_time", nullable = false)
     private LocalDateTime orderDateTime;
@@ -36,12 +38,20 @@ public class DeliveryOrder {
         columnDefinition = "binary(16)",
         foreignKey = @ForeignKey(name = "fk_order_line_item_to_orders")
     )
-    private List<DeliveryOrderLineItem> deliveryOrderLineItems;
+    private List<EatInOrderLineItem> eatInOrderLineItems;
 
-    @Column(name = "delivery_address")
-    private String deliveryAddress;
+    @ManyToOne
+    @JoinColumn(
+        name = "order_table_id",
+        columnDefinition = "binary(16)",
+        foreignKey = @ForeignKey(name = "fk_orders_to_order_table")
+    )
+    private OrderTable orderTable;
 
-    public DeliveryOrder() {
+    @Transient
+    private UUID orderTableId;
+
+    public EatInOrder() {
     }
 
     public UUID getId() {
@@ -52,11 +62,11 @@ public class DeliveryOrder {
         this.id = id;
     }
 
-    public DeliveryOrderStatus getStatus() {
+    public EatInOrderStatus getStatus() {
         return status;
     }
 
-    public void setStatus(final DeliveryOrderStatus status) {
+    public void setStatus(final EatInOrderStatus status) {
         this.status = status;
     }
 
@@ -68,19 +78,27 @@ public class DeliveryOrder {
         this.orderDateTime = orderDateTime;
     }
 
-    public List<DeliveryOrderLineItem> getDeliveryOrderLineItems() {
-        return deliveryOrderLineItems;
+    public List<EatInOrderLineItem> getEatInOrderLineItems() {
+        return eatInOrderLineItems;
     }
 
-    public void setDeliveryOrderOrderLineItems(final List<DeliveryOrderLineItem> deliveryOrderLineItems) {
-        this.deliveryOrderLineItems = deliveryOrderLineItems;
+    public void setEatInOrderLineItems(final List<EatInOrderLineItem> orderLineItems) {
+        this.eatInOrderLineItems = orderLineItems;
     }
 
-    public String getDeliveryAddress() {
-        return deliveryAddress;
+    public OrderTable getOrderTable() {
+        return orderTable;
     }
 
-    public void setDeliveryAddress(final String deliveryAddress) {
-        this.deliveryAddress = deliveryAddress;
+    public void setOrderTable(final OrderTable orderTable) {
+        this.orderTable = orderTable;
+    }
+
+    public UUID getOrderTableId() {
+        return orderTableId;
+    }
+
+    public void setOrderTableId(final UUID orderTableId) {
+        this.orderTableId = orderTableId;
     }
 }
