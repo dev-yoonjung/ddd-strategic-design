@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.UUID;
 
-import static kitchenpos.Fixtures.INVALID_ID;
+import static kitchenpos.menu.MenuFixtures.INVALID_ID;
 import static kitchenpos.menu.MenuFixtures.menu;
 import static kitchenpos.menu.MenuFixtures.menuGroup;
 import static kitchenpos.menu.MenuFixtures.menuProduct;

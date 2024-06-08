@@ -14,6 +14,8 @@ import static kitchenpos.product.ProductFixtures.product;
 
 public class MenuFixtures {
 
+    public static final UUID INVALID_ID = new UUID(0L, 0L);
+
     public static Menu menu() {
         return menu(19_000L, true, menuProduct());
     }

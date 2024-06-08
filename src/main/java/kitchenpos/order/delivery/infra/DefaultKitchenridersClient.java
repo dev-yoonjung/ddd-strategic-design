@@ -1,4 +1,4 @@
-package kitchenpos.asis.infra;
+package kitchenpos.order.delivery.infra;
 
 import org.springframework.stereotype.Component;
 

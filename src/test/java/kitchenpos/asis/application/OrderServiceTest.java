@@ -9,6 +9,7 @@ import kitchenpos.asis.domain.OrderTable;
 import kitchenpos.asis.domain.OrderTableRepository;
 import kitchenpos.asis.domain.OrderType;
 import kitchenpos.menu.InMemoryMenuRepository;
+import kitchenpos.order.delivery.FakeKitchenridersClient;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
