@@ -1,4 +1,4 @@
-package kitchenpos.order.eatin.domain;
+package kitchenpos.order.takeout.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,9 +15,9 @@ import kitchenpos.menu.domain.Menu;
 import java.math.BigDecimal;
 import java.util.UUID;
 
-@Table(name = "eatin_order_line_item")
+@Table(name = "order_line_item")
 @Entity
-public class EatInOrderLineItem {
+public class TakeoutOrderLineItem {
     @Column(name = "seq")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -40,7 +40,7 @@ public class EatInOrderLineItem {
     @Transient
     private BigDecimal price;
 
-    public EatInOrderLineItem() {
+    public TakeoutOrderLineItem() {
     }
 
     public Long getSeq() {

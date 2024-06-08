@@ -27,7 +27,7 @@ public class DeliveryOrderRestController {
     @PostMapping
     public ResponseEntity<DeliveryOrder> create(@RequestBody final DeliveryOrder request) {
         final DeliveryOrder response = deliveryOrderService.create(request);
-        return ResponseEntity.created(URI.create("/api/orders/delivery" + response.getId()))
+        return ResponseEntity.created(URI.create("/api/orders/delivery/" + response.getId()))
             .body(response);
     }
 

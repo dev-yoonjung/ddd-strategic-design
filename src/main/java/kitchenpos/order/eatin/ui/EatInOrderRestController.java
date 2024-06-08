@@ -27,7 +27,7 @@ public class EatInOrderRestController {
     @PostMapping
     public ResponseEntity<EatInOrder> create(@RequestBody final EatInOrder request) {
         final EatInOrder response = eatInOrderService.create(request);
-        return ResponseEntity.created(URI.create("/api/orders/eat-in" + response.getId()))
+        return ResponseEntity.created(URI.create("/api/orders/eat-in/" + response.getId()))
             .body(response);
     }
 
